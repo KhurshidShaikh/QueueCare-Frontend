@@ -4,13 +4,31 @@ import LandingPage from './LandingPage';
 import LoginPage from './LoginPage';
 import Dashboard from './Dashboard';
 
+const ProtectedRoute = ({ children }) => {
+  const token = localStorage.getItem('token');
+  const clinicId = localStorage.getItem('clinic_id');
+
+  if (!token || !clinicId) {
+    return <Navigate to="/" replace />;
+  }
+
+  return children;
+};
+
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
