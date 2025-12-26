@@ -120,7 +120,7 @@ const LandingPage = () => {
                         <div className="relative p-8 bg-gradient-to-b from-blue-50 to-white rounded-3xl border-2 border-blue-100 hover:border-blue-300 transition shadow-lg hover:shadow-xl">
                             <div className="text-blue-600 font-bold text-lg mb-2">🟦 Basic</div>
                             <div className="flex items-baseline gap-1 mb-1">
-                                <span className="text-4xl font-extrabold text-slate-900">₹500</span>
+                                <span className="text-4xl font-extrabold text-slate-900">₹1000</span>
                                 <span className="text-slate-500">/ month</span>
                             </div>
                             <p className="text-slate-600 mb-6">For small & medium clinics</p>
@@ -145,7 +145,7 @@ const LandingPage = () => {
                             </div>
                             <div className="text-purple-600 font-bold text-lg mb-2">🟪 Pro</div>
                             <div className="flex items-baseline gap-1 mb-1">
-                                <span className="text-4xl font-extrabold text-slate-900">₹1000</span>
+                                <span className="text-4xl font-extrabold text-slate-900">₹2000</span>
                                 <span className="text-slate-500">/ month</span>
                             </div>
                             <p className="text-slate-600 mb-6">For growing clinics</p>
